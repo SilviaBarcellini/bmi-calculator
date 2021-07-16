@@ -10,7 +10,12 @@ app.get("/", function (req, res){
 
 app.post("/", function (req, res){
     console.log(req.body)
-    res.send("thanks for posting!");
+
+    var h = req.body.h; 
+    var w = req.body.w; 
+
+    var result = h + w; 
+    res.send("Your BMI index is " + result);
 }); 
 
 app.listen(3000, function(){
