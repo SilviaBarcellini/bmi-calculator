@@ -1,0 +1,19 @@
+{
+  "name": "bmi-calculator",
+  "version": "1.0.0",
+  "description": "BMI calculator web app",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilviaBarcellini/bmi-calculator.git"
+  },
+  "author": "Silvia Bar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SilviaBarcellini/bmi-calculator/issues"
+  },
+  "homepage": "https://github.com/SilviaBarcellini/bmi-calculator#readme"
+}
