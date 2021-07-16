@@ -14,7 +14,7 @@ app.post("/", function (req, res){
     var h = Number(req.body.h); 
     var w = Number(req.body.w); 
 
-    var result = h + w; 
+    var result = w/(h*h); 
     res.send("Your BMI index is " + result);
 }); 
 
