@@ -11,11 +11,11 @@ app.get("/", function (req, res){
 app.post("/", function (req, res){
     console.log(req.body)
 
-    var h = Number(req.body.h); 
-    var w = Number(req.body.w); 
+    var h = parseFloat(req.body.h); 
+    var w = parseFloat(req.body.w); 
 
-    var result = w/(h*h); 
-    res.send("Your BMI index is " + result);
+    var bmi = w/(h*h); 
+    res.send("Your BMI is " + bmi);
 }); 
 
 app.listen(3000, function(){
