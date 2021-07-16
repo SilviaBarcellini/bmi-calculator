@@ -11,8 +11,8 @@ app.get("/", function (req, res){
 app.post("/", function (req, res){
     console.log(req.body)
 
-    var h = req.body.h; 
-    var w = req.body.w; 
+    var h = Number(req.body.h); 
+    var w = Number(req.body.w); 
 
     var result = h + w; 
     res.send("Your BMI index is " + result);
