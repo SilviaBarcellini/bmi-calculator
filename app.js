@@ -1,5 +1,6 @@
 const express = require("express"); 
 const bodyParser = require("body-parser");
+const { response } = require("express");
 
 const app = express(); 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -17,14 +18,20 @@ app.post("/", function (req, res){
 
     var bmi = w/(h*h); 
 
-    if (bmi <= 18.5) {
-        res.send("Your BMI is " + bmi + ". According to NHS you are underweight");
-    } else if (bmi <= 24.5) {
-        res.send("Your BMI is " + bmi + ". According to NHS you are normal");
-    } else if (bmi <= 29.9) {
-        res.send("Your BMI is " + bmi + ". According to NHS you are overweight");
+    
+
+    if (response.statusCode === 200) {
+        if (bmi <= 18.5) {
+            res.send("Your BMI is " + bmi + ". According to NHS you are underweight");
+        } else if (bmi <= 24.5) {
+            res.send("Your BMI is " + bmi + ". According to NHS you are normal");
+        } else if (bmi <= 29.9) {
+            res.send("Your BMI is " + bmi + ". According to NHS you are overweight");
+        } else {
+            res.send("Your BMI is " + bmi + ". According to NHS you are obese");
+        }
     } else {
-        res.send("Your BMI is " + bmi + ". According to NHS you are obese");
+        res.send("Ops! Something did not work out! Please try again! If the problem persist feel free to contact the developer")
     }
     
 }); 
