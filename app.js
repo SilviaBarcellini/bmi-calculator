@@ -17,7 +17,7 @@ app.post("/", function (req, res){
     
     var bmi = w/(h*h);
     module.exports = bmi;
-     
+
         if (response.statusCode === 200) {
             res.sendFile(__dirname + "/success.html")
             if (bmi <= 18.5) {
@@ -27,7 +27,7 @@ app.post("/", function (req, res){
             } else if (bmi <= 29.9) {
                 res.send("<h1>Your BMI is" + bmi + "</h1><h3>According to NHS you are overweight</h3><p>'there are distinct categories of underweight, ideal, overweight and obese, with sharp boundaries that hinge on a decimal place. That's total nonsense.'</p>");
             } else {
-                res.send(("<h1>Your BMI Factorator Says:" + bmi + "</h1><h3>According to NHS you are obese</h3><p>'BMI is scientifically nonsensical. There is no physiological reason to square a person's height (Quetelet had to square the height to get a formula that matched the overall data. If you can't fix the data, rig the formula!). Moreover, it ignores waist size, \n which is a clear indicator of obesity level.' </p>"));
+                res.send(("<h1>Your BMI is:" + bmi + "</h1><h3>According to NHS you are obese</h3><p>'BMI is scientifically nonsensical. There is no physiological reason to square a person's height (Quetelet had to square the height to get a formula that matched the overall data. If you can't fix the data, rig the formula!). Moreover, it ignores waist size, \n which is a clear indicator of obesity level.' </p>"));
             }
         } else {
             res.sendFile(__dirname + "/failure.html")
