@@ -66,18 +66,18 @@
   <form action="/" method="post">
     <!-- <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
     <h1 class="h3 mb-3 fw-normal">BMI Calculator</h1>
-
   
     <div class="form-floating" >
-      <input type="text" class="form-control" id="floatingInput" name="h" placeholder="Height (m)" required autofocus>
+      <input type="text" class="form-control" id="height" name="h" placeholder="Height (m)" required autofocus>
       <label>Height</label>
     </div>
     <div class="form-floating">
-      <input type="text" class="form-control" id="floatingPassword" placeholder="Weight (kg)" name="w" required>
+      <input type="text" class="form-control" id="weight" placeholder="Weight (kg)" name="w" required>
       <label>Weight</label>
     </div>
 
-    <button class="w-100 btn btn-lg btn-success" type="submit">Calculate BMI</button>
+    <button class="w-100 btn btn-lg btn-success" id="btn" type="submit">Calculate BMI</button>
+    <div id="result"></div>
     <p class="mt-5 mb-3 text-muted">&copy; Silvia Bar 2021</p>
   </form>
 </main>
